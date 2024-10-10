@@ -1,0 +1,202 @@
+[gd_scene load_steps=16 format=3 uid="uid://xvu3dwjs4psa"]
+
+[ext_resource type="Material" uid="uid://csna25uuruko2" path="res://m_blockout.tres" id="1_c4413"]
+[ext_resource type="PackedScene" uid="uid://csbct1ntxd81c" path="res://Models/Collection.fbx" id="2_l3p42"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_80fr8"]
+[ext_resource type="PackedScene" uid="uid://mskcwn1a1v6d" path="res://addons/phantom_camera/examples/example_scenes/3D/sub_scenes/playable_character_third_person_3d.tscn" id="3_hnf80"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_j02yr"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_m7dh5"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="5_bruji"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4vnut"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_axcva"]
+
+[sub_resource type="Resource" id="Resource_cfr52"]
+script = ExtResource("4_m7dh5")
+duration = 0.3
+transition = 2
+ease = 1
+
+[sub_resource type="Resource" id="Resource_prwhf"]
+script = ExtResource("5_bruji")
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+projection = 0
+fov = 75.0
+size = 1.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 4000.0
+
+[sub_resource type="Resource" id="Resource_1ej62"]
+script = ExtResource("4_m7dh5")
+duration = 0.4
+transition = 2
+ease = 1
+
+[sub_resource type="Resource" id="Resource_ahxkx"]
+script = ExtResource("5_bruji")
+cull_mask = 1048575
+h_offset = 1.0
+v_offset = 0.0
+projection = 0
+fov = 75.0
+size = 1.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 4000.0
+
+[sub_resource type="Resource" id="Resource_gpou1"]
+script = ExtResource("4_m7dh5")
+duration = 0.6
+transition = 3
+ease = 1
+
+[sub_resource type="Resource" id="Resource_3m01y"]
+script = ExtResource("5_bruji")
+cull_mask = 1048575
+h_offset = 0.0
+v_offset = 0.0
+projection = 0
+fov = 75.0
+size = 1.0
+frustum_offset = Vector2(0, 0)
+near = 0.05
+far = 4000.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.375564, 0.647113, 0.663473, -0.85313, -0.0383142, 0.52029, 0.362107, -0.761431, 0.537682, 1.75869, 6.85048, -6.51983)
+shadow_enabled = true
+
+[node name="Collection" parent="." instance=ExtResource("2_l3p42")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(9.67154, 0, 0, 0, 1, 0, 0, 0, 9.67154, 0, -20.9997, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("1_c4413")
+mesh = SubResource("BoxMesh_4vnut")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_axcva")
+
+[node name="FPS" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 2.19707, 3.28892)
+script = ExtResource("3_80fr8")
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_cfr52")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_prwhf")
+follow_damping = true
+follow_distance = 3.5
+spring_length = 3.5
+
+[node name="SHOULDERAIM" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(0.953716, -0.102847, 0.282571, 0, 0.93969, 0.342019, -0.300706, -0.32619, 0.896198, 0.554121, 2.4707, 1.35844)
+script = ExtResource("3_80fr8")
+priority_override = true
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_1ej62")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_ahxkx")
+follow_offset = Vector3(0, 0.8, -0.399)
+follow_distance = 1.961
+spring_length = 1.961
+
+[node name="CLOSE" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.939691, 0.342019, 0, -0.34202, 0.939689, 0, 2.56771, 2.0598)
+script = ExtResource("3_80fr8")
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_cfr52")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_prwhf")
+follow_offset = Vector3(0, 0.818, 0)
+follow_damping = true
+follow_distance = 2.192
+spring_length = 2.192
+
+[node name="NEUTRAL" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.08007, 3.28892)
+script = ExtResource("3_80fr8")
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_cfr52")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_prwhf")
+follow_offset = Vector3(0, 0.883, 0)
+follow_damping = true
+follow_distance = 3.5
+spring_length = 3.5
+
+[node name="FAR" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.95826, 4.67966)
+script = ExtResource("3_80fr8")
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_cfr52")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_prwhf")
+follow_offset = Vector3(0, 1.255, 0)
+follow_damping = true
+follow_distance = 4.98
+spring_length = 4.98
+
+[node name="VERYFAR" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, 2.39, 13.5)
+script = ExtResource("3_80fr8")
+priority = 10
+follow_mode = 6
+follow_target = NodePath("../PlayerCharacterBody3D")
+tween_resource = SubResource("Resource_cfr52")
+tween_on_load = false
+camera_3d_resource = SubResource("Resource_prwhf")
+follow_offset = Vector3(0, 1.39, 0)
+follow_damping = true
+follow_distance = 13.5
+spring_length = 13.5
+
+[node name="TOPDOWN" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, -1, 2.98023e-08, 0, 2.98023e-08, 1, -1, 4.37114e-08, -1.3027e-15, -0.200665, 13.366, -0.162648)
+script = ExtResource("3_80fr8")
+tween_resource = SubResource("Resource_gpou1")
+camera_3d_resource = SubResource("Resource_3m01y")
+
+[node name="PlayerCharacterBody3D" parent="." node_paths=PackedStringArray("_player_pcam_FIRSTPERSON", "_aim_pcam", "_player_pcam_CLOSE", "_player_pcam_NEUTRAL", "_player_pcam_FAR", "_player_pcam_VERYFAR", "_ceiling_pcam") instance=ExtResource("3_hnf80")]
+unique_name_in_owner = true
+_player_pcam_FIRSTPERSON = NodePath("../FPS")
+_aim_pcam = NodePath("../SHOULDERAIM")
+_player_pcam_CLOSE = NodePath("../CLOSE")
+_player_pcam_NEUTRAL = NodePath("../FPS")
+_player_pcam_FAR = NodePath("../FAR")
+_player_pcam_VERYFAR = NodePath("../VERYFAR")
+_ceiling_pcam = NodePath("../TOPDOWN")
+
+[node name="MainCamera3D" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.953716, -0.102847, 0.282571, 0, 0.93969, 0.342019, -0.300706, -0.32619, 0.896198, 0.554121, 2.4707, 1.35844)
+h_offset = 1.0
+
+[node name="PhantomCameraHost" type="Node" parent="MainCamera3D"]
+script = ExtResource("3_j02yr")
+
+[editable path="PlayerCharacterBody3D"]
