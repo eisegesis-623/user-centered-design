@@ -31,6 +31,8 @@ func _ready() -> void:
 	
 	if _player_pcam_NEUTRAL.get_follow_mode() == _player_pcam_NEUTRAL.FollowMode.THIRD_PERSON:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_pcam = pcams[0]
+	current_pcam.set_priority(30)
 
 
 func _physics_process(delta: float) -> void:
@@ -42,27 +44,38 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if _player_pcam_NEUTRAL.get_follow_mode() == _player_pcam_NEUTRAL.FollowMode.THIRD_PERSON:
-		var active_pcam: PhantomCamera3D
-
-		if is_instance_valid(_aim_pcam):
-			_set_pcam_rotation(_player_pcam_NEUTRAL, event)
-			_set_pcam_rotation(_aim_pcam, event)
-			if _player_pcam_NEUTRAL.get_priority() > _aim_pcam.get_priority():
-				_toggle_aim_pcam(event)
-			else:
-				_toggle_aim_pcam(event)
-
-		if event is InputEventKey and event.pressed:
-			if event.keycode == KEY_SPACE:
-				if _ceiling_pcam.get_priority() < 30 and _player_pcam_NEUTRAL.is_active():
-					_ceiling_pcam.set_priority(30)
-				else:
-					_ceiling_pcam.set_priority(1)
+	for i in pcams:
+			if is_instance_valid(i) and i.follow_mode == PhantomCamera3D.FollowMode.THIRD_PERSON:
+				print("Made it this far!")
+				_set_pcam_rotation(i, event)
+	
+	#if _player_pcam_NEUTRAL.get_follow_mode() == _player_pcam_NEUTRAL.FollowMode.THIRD_PERSON:
+#
+		#if is_instance_valid(_aim_pcam):
+			#_set_pcam_rotation(_player_pcam_NEUTRAL, event)
+			#_set_pcam_rotation(_aim_pcam, event)
+			#if _player_pcam_NEUTRAL.get_priority() > _aim_pcam.get_priority():
+				#_toggle_aim_pcam(event)
+			#else:
+				#_toggle_aim_pcam(event)
+#
+		#if event is InputEventKey and event.pressed:
+			#if event.keycode == KEY_SPACE:
+				#if _ceiling_pcam.get_priority() < 30 and _player_pcam_NEUTRAL.is_active():
+					#_ceiling_pcam.set_priority(30)
+				#else:
+					#_ceiling_pcam.set_priority(1)
 	## TODO: Toggle between each camera type.
 	if event.is_action_pressed("cam_any"):
-		print(str(pcams))
+		go_to_next_pcam()
 
+var current_pcam : PhantomCamera3D
+func go_to_next_pcam():
+	var new_pcam_index :int= (pcams.find(current_pcam) + 1)%7
+	current_pcam.set_priority(1)
+	current_pcam = pcams[new_pcam_index]
+	current_pcam.set_priority(30)
+	print("Toggled to "+str(new_pcam_index))
 
 func _set_pcam_rotation(pcam: PhantomCamera3D, event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

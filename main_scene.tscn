@@ -88,23 +88,24 @@ shape = SubResource("BoxShape3D_axcva")
 
 [node name="FPS" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 2.19707, 3.28892)
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 1, 0)
 script = ExtResource("3_80fr8")
-priority = 10
+priority_override = true
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_cfr52")
 tween_on_load = false
 camera_3d_resource = SubResource("Resource_prwhf")
 follow_damping = true
-follow_distance = 3.5
-spring_length = 3.5
+follow_distance = 0.0
+spring_length = 0.0
 
 [node name="SHOULDERAIM" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
-transform = Transform3D(0.953716, -0.102847, 0.282571, 0, 0.93969, 0.342019, -0.300706, -0.32619, 0.896198, 0.554121, 2.4707, 1.35844)
+transform = Transform3D(0.953716, -0.102847, 0.282571, 0, 0.93969, 0.342019, -0.300706, -0.32619, 0.896198, 0.554122, 2.4707, 1.35844)
 script = ExtResource("3_80fr8")
-priority_override = true
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_1ej62")
@@ -118,7 +119,7 @@ spring_length = 1.961
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.939691, 0.342019, 0, -0.34202, 0.939689, 0, 2.56771, 2.0598)
 script = ExtResource("3_80fr8")
-priority = 10
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_cfr52")
@@ -131,9 +132,9 @@ spring_length = 2.192
 
 [node name="NEUTRAL" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.08007, 3.28892)
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.08007, 3.28891)
 script = ExtResource("3_80fr8")
-priority = 10
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_cfr52")
@@ -146,9 +147,9 @@ spring_length = 3.5
 
 [node name="FAR" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.95826, 4.67966)
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 3.95825, 4.67966)
 script = ExtResource("3_80fr8")
-priority = 10
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_cfr52")
@@ -163,7 +164,7 @@ spring_length = 4.98
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, 2.39, 13.5)
 script = ExtResource("3_80fr8")
-priority = 10
+priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")
 tween_resource = SubResource("Resource_cfr52")
@@ -178,6 +179,7 @@ spring_length = 13.5
 unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, -1, 2.98023e-08, 0, 2.98023e-08, 1, -1, 4.37114e-08, -1.3027e-15, -0.200665, 13.366, -0.162648)
 script = ExtResource("3_80fr8")
+priority = 1
 tween_resource = SubResource("Resource_gpou1")
 camera_3d_resource = SubResource("Resource_3m01y")
 
@@ -186,15 +188,14 @@ unique_name_in_owner = true
 _player_pcam_FIRSTPERSON = NodePath("../FPS")
 _aim_pcam = NodePath("../SHOULDERAIM")
 _player_pcam_CLOSE = NodePath("../CLOSE")
-_player_pcam_NEUTRAL = NodePath("../FPS")
+_player_pcam_NEUTRAL = NodePath("../NEUTRAL")
 _player_pcam_FAR = NodePath("../FAR")
 _player_pcam_VERYFAR = NodePath("../VERYFAR")
 _ceiling_pcam = NodePath("../TOPDOWN")
 
 [node name="MainCamera3D" type="Camera3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(0.953716, -0.102847, 0.282571, 0, 0.93969, 0.342019, -0.300706, -0.32619, 0.896198, 0.554121, 2.4707, 1.35844)
-h_offset = 1.0
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 1, 0)
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera3D"]
 script = ExtResource("3_j02yr")
