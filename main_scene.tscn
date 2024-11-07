@@ -90,7 +90,6 @@ shape = SubResource("BoxShape3D_axcva")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, 0, 1, 0)
 script = ExtResource("3_80fr8")
-priority_override = true
 priority = 1
 follow_mode = 6
 follow_target = NodePath("../PlayerCharacterBody3D")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://btj1maadi0pro"]
+
+[ext_resource type="Script" path="res://Scenes/library_asset.gd" id="1_nkxqk"]
+[ext_resource type="Texture2D" uid="uid://0glqtpld4goa" path="res://icon.svg" id="2_umjn7"]
+
+[node name="LibraryAsset" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1016.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_nkxqk")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+icon = ExtResource("2_umjn7")
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_vertical = 2
+bbcode_enabled = true
+text = "[center]Library Asset"
+fit_content = true
