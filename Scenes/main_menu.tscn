@@ -36,4 +36,5 @@ text = "List of Entities"
 layout_mode = 2
 text = "Quit"
 
+[connection signal="pressed" from="MenuOptions/MainSceneButton" to="MenuOptions" method="load_main_scene"]
 [connection signal="pressed" from="MenuOptions/QuitButton" to="MenuOptions" method="quit_game"]

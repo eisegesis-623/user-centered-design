@@ -16,6 +16,7 @@ size = Vector3(0.5, 0.5, 0.3)
 transform = Transform3D(0.999903, 0.0139622, 0, -0.0139622, 0.999903, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 2
 script = ExtResource("1_0dnfe")
+mouse_sensitivity = 0.15
 metadata/_edit_group_ = true
 
 [node name="PlayerArea3D" type="Area3D" parent="."]

@@ -68,10 +68,23 @@ func _unhandled_input(event: InputEvent) -> void:
 	## TODO: Toggle between each camera type.
 	if event.is_action_pressed("cam_any"):
 		go_to_next_pcam()
+	if event.is_action_pressed("cam_1_fps"):
+		go_to_next_pcam(0)
+	if event.is_action_pressed("cam_2_shoulder"):
+		go_to_next_pcam(1)
+	if event.is_action_pressed("cam_3_close"):
+		go_to_next_pcam(2)
+	if event.is_action_pressed("cam_4_neutral"):
+		go_to_next_pcam(3)
+	if event.is_action_pressed("cam_5_far"):
+		go_to_next_pcam(4)
+	if event.is_action_pressed("cam_6_veryfar"):
+		go_to_next_pcam(5)
+	if event.is_action_pressed("cam_7_topdown"):
+		go_to_next_pcam(6)
 
 var current_pcam : PhantomCamera3D
-func go_to_next_pcam():
-	var new_pcam_index :int= (pcams.find(current_pcam) + 1)%7
+func go_to_next_pcam(new_pcam_index:int =(pcams.find(current_pcam) + 1)%7):
 	current_pcam.set_priority(1)
 	current_pcam = pcams[new_pcam_index]
 	current_pcam.set_priority(30)
