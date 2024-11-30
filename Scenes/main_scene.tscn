@@ -206,12 +206,39 @@ pause_menu = NodePath("../PauseMenu")
 
 [node name="MainCamera3D" type="Camera3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, -3, 3.95825, 4.67966)
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.342019, 0, -0.34202, 0.93969, -3, 2, 0)
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera3D"]
 script = ExtResource("6_bp0vr")
 
 [node name="LibraryAssetArea" parent="." instance=ExtResource("7_6yjou")]
+
+[node name="LibraryAssetArea2" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(1.25359, 0, 0.560155, 0, 1.37305, 0, -0.560155, 0, 1.25359, 8.29251, 9.53674e-07, 1.51105)
+
+[node name="LibraryAssetArea3" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, -2.62074, 9.53674e-07, -30.5099)
+
+[node name="LibraryAssetArea4" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, 21.6308, -6.67572e-06, -54.8379)
+
+[node name="LibraryAssetArea5" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, -23.4938, -6.67572e-06, -54.998)
+
+[node name="LibraryAssetArea6" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, -0.832111, -6.67572e-06, 31.0738)
+
+[node name="LibraryAssetArea7" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, -22.3811, -6.67572e-06, 72.0926)
+
+[node name="LibraryAssetArea8" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, 38.1392, -6.67572e-06, 72.9017)
+
+[node name="LibraryAssetArea9" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(24.29, 0, -31.414, 0, 39.7095, 0, 31.414, 0, 24.29, 171.416, 6.98692, 18.246)
+
+[node name="LibraryAssetArea10" parent="." instance=ExtResource("7_6yjou")]
+transform = Transform3D(-20.2618, -0.139136, -34.1509, -0.26546, 39.7087, -0.00428119, 34.1502, 0.226116, -20.2623, 238.701, 6.98692, -19.0298)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x1430")
@@ -221,7 +248,7 @@ camera_attributes = SubResource("CameraAttributesPractical_t3uqv")
 transform = Transform3D(0.673632, 0.453754, -0.583376, 2.98023e-08, 0.789341, 0.613955, 0.739067, -0.413579, 0.531726, 0, 0, 0)
 shadow_enabled = true
 
-[node name="PauseMenu" type="Control" parent="." node_paths=PackedStringArray("library_button")]
+[node name="PauseMenu" type="Control" parent="." node_paths=PackedStringArray("library_button") groups=["PauseMenu"]]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -257,5 +284,9 @@ text = "View in Library"
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Main Menu"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Button" to="PauseMenu" method="unpause"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Button2" to="PauseMenu" method="go_to_library"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Button3" to="PauseMenu" method="return_to_main_menu"]
 
 [editable path="PlayerCharacterBody3D"]

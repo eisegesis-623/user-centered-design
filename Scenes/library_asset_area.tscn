@@ -10,7 +10,7 @@ radius = 2.5
 
 [sub_resource type="Resource" id="Resource_7nbq5"]
 script = ExtResource("3_fviie")
-duration = 1.0
+duration = 0.1
 transition = 0
 ease = 2
 
@@ -29,6 +29,7 @@ far = 4000.0
 [node name="LibraryAssetArea" type="Area3D" node_paths=PackedStringArray("associated_camera", "text_label")]
 transform = Transform3D(0.912998, 0, 0.407964, 0, 1, 0, -0.407964, 0, 0.912998, 0, 0, 0)
 script = ExtResource("1_88amw")
+library_asset = null
 associated_camera = NodePath("PhantomCamera3D")
 text_label = NodePath("Label3D")
 
@@ -43,6 +44,7 @@ camera_3d_resource = SubResource("Resource_kugg0")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6919, 0)
+visible = false
 billboard = 1
 text = "LIBRARY ASSET"
 font_size = 100

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://mskcwn1a1v6d"]
+[gd_scene load_steps=7 format=3 uid="uid://mskcwn1a1v6d"]
 
 [ext_resource type="Script" path="res://addons/phantom_camera/examples/scripts/3D/player_controller_third_person.gd" id="1_0dnfe"]
+[ext_resource type="Script" path="res://addons/phantom_camera/examples/example_scenes/3D/sub_scenes/player_area_3d.gd" id="2_hfhyn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s61dn"]
 
@@ -20,6 +21,7 @@ mouse_sensitivity = 0.15
 metadata/_edit_group_ = true
 
 [node name="PlayerArea3D" type="Area3D" parent="."]
+script = ExtResource("2_hfhyn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerArea3D"]
 shape = SubResource("CapsuleShape3D_s61dn")
