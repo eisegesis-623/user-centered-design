@@ -16,25 +16,30 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 498.0
-offset_top = -50.0
-offset_right = -498.0
-offset_bottom = 51.0
+offset_left = 755.0
+offset_top = -119.0
+offset_right = -755.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 script = ExtResource("1_amgo8")
 
 [node name="MainSceneButton" type="Button" parent="MenuOptions"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Main Scene"
 
-[node name="ListOfEntitiesButton" type="Button" parent="MenuOptions"]
+[node name="Library" type="Button" parent="MenuOptions"]
 layout_mode = 2
-text = "List of Entities"
+theme_override_font_sizes/font_size = 50
+text = "Library"
 
 [node name="QuitButton" type="Button" parent="MenuOptions"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [connection signal="pressed" from="MenuOptions/MainSceneButton" to="MenuOptions" method="load_main_scene"]
+[connection signal="pressed" from="MenuOptions/Library" to="MenuOptions" method="load_library"]
 [connection signal="pressed" from="MenuOptions/QuitButton" to="MenuOptions" method="quit_game"]

@@ -25,66 +25,52 @@ var camera_distance := NEUTRAL
 func _ready() -> void:
 	super()
 	
-	#_player_pcam_NEUTRAL = owner.get_node("%PlayerPhantomCamera3D")
-	#_aim_pcam = owner.get_node("%PlayerAimPhantomCamera3D")
-	#_ceiling_pcam = owner.get_node("%CeilingPhantomCamera3D")
-	
 	if _player_pcam_NEUTRAL.get_follow_mode() == _player_pcam_NEUTRAL.FollowMode.THIRD_PERSON:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	current_pcam = pcams[0]
+	current_pcam = pcams[4]
 	current_pcam.set_priority(30)
 
-
+@export var pause_menu : Control
 func _physics_process(delta: float) -> void:
-	super(delta)
+	if !pause_menu.is_paused:
+		super(delta)
 
-	if velocity.length() > 0.2:
-		var look_direction: Vector2 = Vector2(velocity.z, velocity.x)
-		_player_direction.rotation.y = look_direction.angle()
+		if velocity.length() > 0.2:
+			var look_direction: Vector2 = Vector2(velocity.z, velocity.x)
+			_player_direction.rotation.y = look_direction.angle()
+	else:
+		velocity = Vector3.ZERO
+		move_and_slide()
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	for i in pcams:
-			if is_instance_valid(i) and i.follow_mode == PhantomCamera3D.FollowMode.THIRD_PERSON:
-				print("Made it this far!")
-				_set_pcam_rotation(i, event)
-	
-	#if _player_pcam_NEUTRAL.get_follow_mode() == _player_pcam_NEUTRAL.FollowMode.THIRD_PERSON:
-#
-		#if is_instance_valid(_aim_pcam):
-			#_set_pcam_rotation(_player_pcam_NEUTRAL, event)
-			#_set_pcam_rotation(_aim_pcam, event)
-			#if _player_pcam_NEUTRAL.get_priority() > _aim_pcam.get_priority():
-				#_toggle_aim_pcam(event)
-			#else:
-				#_toggle_aim_pcam(event)
-#
-		#if event is InputEventKey and event.pressed:
-			#if event.keycode == KEY_SPACE:
-				#if _ceiling_pcam.get_priority() < 30 and _player_pcam_NEUTRAL.is_active():
-					#_ceiling_pcam.set_priority(30)
-				#else:
-					#_ceiling_pcam.set_priority(1)
-	## TODO: Toggle between each camera type.
-	if event.is_action_pressed("cam_any"):
-		go_to_next_pcam()
-	if event.is_action_pressed("cam_1_fps"):
-		go_to_next_pcam(0)
-	if event.is_action_pressed("cam_2_shoulder"):
-		go_to_next_pcam(1)
-	if event.is_action_pressed("cam_3_close"):
-		go_to_next_pcam(2)
-	if event.is_action_pressed("cam_4_neutral"):
-		go_to_next_pcam(3)
-	if event.is_action_pressed("cam_5_far"):
-		go_to_next_pcam(4)
-	if event.is_action_pressed("cam_6_veryfar"):
-		go_to_next_pcam(5)
-	if event.is_action_pressed("cam_7_topdown"):
-		go_to_next_pcam(6)
+	if !pause_menu.is_paused:
+		for i in pcams:
+				if is_instance_valid(i) and i.follow_mode == PhantomCamera3D.FollowMode.THIRD_PERSON:
+					_set_pcam_rotation(i, event)
+		if event.is_action_pressed("cam_any"):
+			go_to_next_pcam()
+		if event.is_action_pressed("cam_1_fps"):
+			go_to_next_pcam(0)
+		if event.is_action_pressed("cam_2_shoulder"):
+			go_to_next_pcam(1)
+		if event.is_action_pressed("cam_3_close"):
+			go_to_next_pcam(2)
+		if event.is_action_pressed("cam_4_neutral"):
+			go_to_next_pcam(3)
+		if event.is_action_pressed("cam_5_far"):
+			go_to_next_pcam(4)
+		if event.is_action_pressed("cam_6_veryfar"):
+			go_to_next_pcam(5)
+		if event.is_action_pressed("cam_7_topdown"):
+			go_to_next_pcam(6)
 
 var current_pcam : PhantomCamera3D
 func go_to_next_pcam(new_pcam_index:int =(pcams.find(current_pcam) + 1)%7):
+	if (new_pcam_index == 0):
+		visible = false
+	else:
+		visible = true
 	current_pcam.set_priority(1)
 	current_pcam = pcams[new_pcam_index]
 	current_pcam.set_priority(30)
