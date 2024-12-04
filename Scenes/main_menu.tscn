@@ -11,6 +11,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_8hgyp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_8hgyp")
 
 [node name="MenuOptions" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -37,10 +47,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Library"
 
-[node name="Button" type="Button" parent="MenuOptions"]
+[node name="Controls" type="Button" parent="MenuOptions"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Controls"
+text = "How-To Use"
 
 [node name="QuitButton" type="Button" parent="MenuOptions"]
 layout_mode = 2
@@ -48,6 +58,7 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 34.0
 offset_top = 45.0
 offset_right = 1886.0
@@ -91,6 +102,7 @@ theme_override_font_sizes/font_size = 50
 text = "Return to Main Menu"
 
 [node name="Label2" type="Label" parent="Options"]
+layout_mode = 0
 offset_left = 48.0
 offset_top = 697.0
 offset_right = 1900.0
@@ -101,6 +113,6 @@ autowrap_mode = 3
 
 [connection signal="pressed" from="MenuOptions/MainSceneButton" to="MenuOptions" method="load_main_scene"]
 [connection signal="pressed" from="MenuOptions/Library" to="MenuOptions" method="load_library"]
-[connection signal="pressed" from="MenuOptions/Button" to="Options" method="enable_options"]
+[connection signal="pressed" from="MenuOptions/Controls" to="Options" method="enable_options"]
 [connection signal="pressed" from="MenuOptions/QuitButton" to="MenuOptions" method="quit_game"]
 [connection signal="pressed" from="Options/Button" to="Options" method="disable_options"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://xvu3dwjs4psa"]
+[gd_scene load_steps=25 format=3 uid="uid://xvu3dwjs4psa"]
 
 [ext_resource type="PackedScene" uid="uid://csbct1ntxd81c" path="res://Models/Collection.fbx" id="1_2dwne"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_a2dc8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_bp0vr"]
 [ext_resource type="Texture2D" uid="uid://cvjsp1v28dm1" path="res://qwantani_sunset_1k.hdr" id="7_3lbth"]
 [ext_resource type="PackedScene" uid="uid://dg2r2vmsvdix0" path="res://Scenes/library_asset_area.tscn" id="7_6yjou"]
+[ext_resource type="Theme" uid="uid://d0pp1u66vhys0" path="res://Scenes/demo_library.tres" id="9_7w6dl"]
 [ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="9_mwu1d"]
 
 [sub_resource type="Resource" id="Resource_cfr52"]
@@ -64,6 +65,17 @@ frustum_offset = Vector2(0, 0)
 near = 0.05
 far = 4000.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8hi68"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntor8"]
+size = Vector3(1.59119, 0.654785, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_37jt3"]
+size = Vector3(1.67285, 1.64209, 0.132629)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ydir3"]
+size = Vector3(3.72406, 3.89868, 0.446167)
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_aka3y"]
 panorama = ExtResource("7_3lbth")
 
@@ -91,6 +103,1239 @@ auto_exposure_min_sensitivity = 500.0
 [node name="Node3D" type="Node3D"]
 
 [node name="Collection" parent="." instance=ExtResource("1_2dwne")]
+
+[node name="StaticBody3D" parent="Collection/Cube" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_001_010" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_002_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_010" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_011" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_012" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_013" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_014" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_015" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_016" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_017" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_018" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_019" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_020" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_021" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_022" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_023" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_024" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_025" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_026" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_027" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_028" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_029" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_030" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_031" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_032" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_033" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_034" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_035" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_036" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_037" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_038" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_039" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_040" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_041" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_042" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_043" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_044" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_045" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_046" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_047" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_048" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_049" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_003_050" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_010" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_011" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_012" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_013" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_014" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_015" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_016" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_017" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_018" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_019" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_020" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_021" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_022" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_023" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_024" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_025" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_026" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_027" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_028" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_029" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_030" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_031" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_032" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_033" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_034" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_035" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_036" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_037" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_038" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_039" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_040" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_041" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_042" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_043" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_044" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_045" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_046" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_047" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_048" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_049" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_050" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_051" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_052" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_053" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_054" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_055" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_056" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_057" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_058" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_059" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_060" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_061" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_062" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_063" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_064" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_065" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_066" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_067" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_068" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_069" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_070" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_071" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_072" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_073" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_074" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_075" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_076" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_077" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_078" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_079" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_080" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_081" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_082" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_083" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_084" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_085" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_086" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_087" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_088" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_089" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_090" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_091" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_092" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_093" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_094" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_095" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_096" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_097" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_098" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_099" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_100" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_101" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_102" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_103" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_104" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_105" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_106" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_107" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_108" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_109" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_110" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_111" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_112" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_113" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_114" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_115" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_116" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_117" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_118" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_119" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_120" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_121" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_122" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_123" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_124" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_125" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_126" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_127" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_004_128" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_005_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_005_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_006_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_007_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_010" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_011" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_012" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_013" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_014" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_015" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_016" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_017" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_018" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_019" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_020" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_021" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_022" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_023" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_024" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_025" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_026" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_027" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_028" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_029" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_030" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_031" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_032" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_033" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_034" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_035" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_036" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_037" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_038" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_039" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_040" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_041" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_042" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_043" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_044" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_045" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_046" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_047" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_048" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_049" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_050" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_051" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_052" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_053" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_054" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_055" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_056" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_057" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_058" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_059" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_060" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_061" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_062" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_063" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_064" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_065" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_066" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_067" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_068" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_069" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_070" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_071" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_072" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_073" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_074" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_075" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_076" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_077" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_078" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_079" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_080" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_081" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_082" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_083" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_084" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_085" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_086" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_087" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_088" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_089" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_090" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_091" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_092" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_093" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_094" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_095" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_096" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_097" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_098" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_099" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_100" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_101" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_102" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_103" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_104" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_105" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_106" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_107" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_108" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_109" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_110" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_111" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_112" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_113" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_114" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_115" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_116" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_117" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_118" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_119" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_120" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_121" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_122" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_123" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_124" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_125" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_126" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_127" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_128" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_129" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_130" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_131" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_132" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_133" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_134" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_135" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_136" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_137" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_138" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_139" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_140" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_141" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_142" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_143" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_144" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_145" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_146" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_147" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_148" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_149" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_150" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_151" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_152" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_153" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_154" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_155" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_156" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_157" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_158" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_159" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_160" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_161" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_162" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_163" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_164" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_165" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_166" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_167" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_168" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_169" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_170" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_171" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_172" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_173" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_174" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_175" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_176" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_177" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_178" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_008_179" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_001" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_002" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_003" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_004" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_005" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_006" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_007" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_008" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Cube_009_009" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Suzanne" index="0"]
+input_ray_pickable = false
+
+[node name="StaticBody3D" parent="Collection/Suzanne_001" index="0"]
+input_ray_pickable = false
 
 [node name="FPS" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
@@ -213,32 +1458,72 @@ script = ExtResource("6_bp0vr")
 
 [node name="LibraryAssetArea" parent="." instance=ExtResource("7_6yjou")]
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea"]
+transform = Transform3D(1.90143, 0, -0.968661, 0, 2.13395, 0, 0.968661, 0, 1.90143, -0.00205442, 0.944771, 0.0372358)
+shape = SubResource("BoxShape3D_8hi68")
+
 [node name="LibraryAssetArea2" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(1.25359, 0, 0.560155, 0, 1.37305, 0, -0.560155, 0, 1.25359, 8.29251, 9.53674e-07, 1.51105)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea2"]
+transform = Transform3D(2.12408, 0, -0.205012, 0, 2.13395, 0, 0.205012, 0, 2.12408, -0.147904, 1.16306, 0.0231597)
+shape = SubResource("BoxShape3D_ntor8")
 
 [node name="LibraryAssetArea3" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, -2.62074, 9.53674e-07, -30.5099)
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea3"]
+transform = Transform3D(1.94415, -0.0269757, -0.87938, 0.0297557, 2.13375, 0.000330298, 0.879291, -0.0125629, 1.94434, 0.470519, 1.8463, 0.102491)
+shape = SubResource("BoxShape3D_37jt3")
+
 [node name="LibraryAssetArea4" parent="." instance=ExtResource("7_6yjou")]
-transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, 21.6308, -6.67572e-06, -54.8379)
+transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, 17.9197, -6.67572e-06, -50.5497)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea4"]
+transform = Transform3D(1.94415, -0.0269757, -0.87938, 0.0297557, 2.13375, 0.000330298, 0.879291, -0.0125629, 1.94434, 0.470519, 1.8463, 0.102491)
+shape = SubResource("BoxShape3D_37jt3")
 
 [node name="LibraryAssetArea5" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(5.06818, 0, 2.26466, 0, 5.55114, 0, -2.26466, 0, 5.06818, -23.4938, -6.67572e-06, -54.998)
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea5"]
+transform = Transform3D(1.94415, -0.0269757, -0.87938, 0.0297557, 2.13375, 0.000330298, 0.879291, -0.0125629, 1.94434, 0.297614, 1.8463, 0.933156)
+shape = SubResource("BoxShape3D_37jt3")
+
 [node name="LibraryAssetArea6" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, -0.832111, -6.67572e-06, 31.0738)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea6"]
+transform = Transform3D(-0.461814, 0.461814, -0.757268, 0.707106, 0.707107, 0, 0.535469, -0.53547, -0.653104, -0.11522, -0.158456, 0.141165)
+shape = SubResource("BoxShape3D_ydir3")
 
 [node name="LibraryAssetArea7" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, -22.3811, -6.67572e-06, 72.0926)
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea7"]
+transform = Transform3D(-0.461814, 0.461814, -0.757268, 0.707106, 0.707107, 0, 0.535469, -0.53547, -0.653104, -0.131217, -0.158456, 0.51186)
+shape = SubResource("BoxShape3D_ydir3")
+
 [node name="LibraryAssetArea8" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(-3.62547, 0, 4.2037, 0, 5.55114, 0, -4.2037, 0, -3.62547, 38.1392, -6.67572e-06, 72.9017)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea8"]
+transform = Transform3D(-0.461814, 0.461814, -0.757268, 0.707106, 0.707107, 0, 0.535469, -0.53547, -0.653104, 0.106558, -0.158456, 0.549754)
+shape = SubResource("BoxShape3D_ydir3")
 
 [node name="LibraryAssetArea9" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(24.29, 0, -31.414, 0, 39.7095, 0, 31.414, 0, 24.29, 171.416, 6.98692, 18.246)
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea9"]
+transform = Transform3D(-0.707665, 0.707665, 0.773832, 0.894537, 0.894538, 0, -0.547182, 0.547182, -1.00079, 0.509301, -0.198102, 1.36599)
+shape = SubResource("BoxShape3D_ydir3")
+
 [node name="LibraryAssetArea10" parent="." instance=ExtResource("7_6yjou")]
 transform = Transform3D(-20.2618, -0.139136, -34.1509, -0.26546, 39.7087, -0.00428119, 34.1502, 0.226116, -20.2623, 238.701, 6.98692, -19.0298)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LibraryAssetArea10"]
+transform = Transform3D(-0.825282, 0.812551, -0.687132, 0.946784, 0.957629, -0.00471847, 0.485784, -0.48599, -1.15815, -0.577851, -0.213468, -0.274604)
+shape = SubResource("BoxShape3D_ydir3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x1430")
@@ -251,18 +1536,20 @@ shadow_enabled = true
 [node name="PauseMenu" type="Control" parent="." node_paths=PackedStringArray("library_button") groups=["PauseMenu"]]
 visible = false
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.0614583
+anchor_top = 0.386111
+anchor_right = 0.253125
+anchor_bottom = 0.613889
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("9_7w6dl")
 script = ExtResource("9_mwu1d")
 library_button = NodePath("VBoxContainer/Button2")
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.049
 anchor_right = 0.257
 anchor_bottom = 1.0
 offset_left = 0.919998
@@ -280,6 +1567,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "View in Library"
 
+[node name="DeselectButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Deselect Item"
+
 [node name="Button3" type="Button" parent="PauseMenu/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -287,6 +1579,8 @@ text = "Main Menu"
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Button" to="PauseMenu" method="unpause"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Button2" to="PauseMenu" method="go_to_library"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/DeselectButton" to="PauseMenu" method="deselect_item"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Button3" to="PauseMenu" method="return_to_main_menu"]
 
+[editable path="Collection"]
 [editable path="PlayerCharacterBody3D"]
