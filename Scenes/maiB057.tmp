@@ -47,14 +47,22 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 917.0
+offset_right = 1886.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 50
+text = "Tip: Pause near interesting objects to have the option to view it in the Library mode!"
+autowrap_mode = 3
+
 [node name="Label2" type="Label" parent="."]
 offset_left = 34.0
 offset_top = 45.0
 offset_right = 1886.0
 offset_bottom = 208.0
 theme_override_font_sizes/font_size = 100
-text = "Team Polygon App
-(High Fidelity Prototype)"
+text = "Team Polygon App"
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -89,15 +97,6 @@ offset_right = 575.0
 offset_bottom = 1020.0
 theme_override_font_sizes/font_size = 50
 text = "Return to Main Menu"
-
-[node name="Label2" type="Label" parent="Options"]
-offset_left = 48.0
-offset_top = 697.0
-offset_right = 1900.0
-offset_bottom = 860.0
-theme_override_font_sizes/font_size = 50
-text = "Tip: Pause near interesting objects to have the option to view it in the Library mode!"
-autowrap_mode = 3
 
 [connection signal="pressed" from="MenuOptions/MainSceneButton" to="MenuOptions" method="load_main_scene"]
 [connection signal="pressed" from="MenuOptions/Library" to="MenuOptions" method="load_library"]
