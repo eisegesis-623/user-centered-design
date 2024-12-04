@@ -46,3 +46,4 @@ Button/styles/normal = SubResource("StyleBoxFlat_x3ogg")
 Label/font_sizes/font_size = 46
 Panel/styles/panel = SubResource("StyleBoxFlat_sm61d")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_m66da")
+RichTextLabel/font_sizes/normal_font_size = 34

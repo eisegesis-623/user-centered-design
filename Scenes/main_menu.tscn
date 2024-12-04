@@ -70,7 +70,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Options" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,7 +107,7 @@ offset_top = 697.0
 offset_right = 1900.0
 offset_bottom = 860.0
 theme_override_font_sizes/font_size = 50
-text = "Tip: Pause near interesting objects to have the option to view it in the Library mode!"
+text = "While paused, click on interesting objects. You can then view them in the Library!"
 autowrap_mode = 3
 
 [connection signal="pressed" from="MenuOptions/MainSceneButton" to="MenuOptions" method="load_main_scene"]
